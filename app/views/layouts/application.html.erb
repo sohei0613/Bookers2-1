@@ -22,7 +22,7 @@
         <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Home", user_path(current_user), method: :delete, class: 'nav-link text-ligth' %>
+          <%= link_to "Home", user_path(current_user), class: 'nav-link text-ligth' %>
         </li>
         <li class="nav-item">
           <%= link_to 'Users', users_path, class: 'nav-link text-light' %>
@@ -31,7 +31,7 @@
           <%= link_to 'Books', books_path, class: 'nav-link text-light' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Log out', destroy_user_session_path, class: 'nav-link text-light' %>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link text-light' %>
         </li>
         <% else %>
         <li class="nav-item">
